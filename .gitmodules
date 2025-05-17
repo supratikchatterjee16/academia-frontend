@@ -1,0 +1,3 @@
+[submodule "academia"]
+	path = academia
+	url = git@github.com:supratikchatterjee16/academia.git

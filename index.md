@@ -4,22 +4,22 @@ layout: home
 
 hero:
   name: "academia"
-  text: "Notes collected over years of studies."
-  tagline: My great project tagline
+  text: "A collection of industry relevant notes."
+  tagline: Understand industries in a structured way.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Get Started
+      link: /README.md
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Structured Industry relevant notes
+    details: Notes divided into functional, technical, business, and other topics.
+  - title: Easily Searchable
+    details: Use the search functionality to quickly find what you're looking for.
+  - title: Open Sourced
+    details: Notes are maintained in an open source repository for people to contribute and review.
 ---
 
