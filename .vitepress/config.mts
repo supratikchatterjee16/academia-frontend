@@ -1,9 +1,11 @@
 import { defineConfig } from 'vitepress'
+import {withSidebar} from 'vitepress-sidebar'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitePressOptions = {
   title: "academia",
   description: "Notes collected over years of studies.",
+  lang: 'en-US',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/conceivilize.svg',
@@ -21,7 +23,7 @@ export default defineConfig({
     //     ]
     //   }
     // ],
-
+    
     socialLinks: [
       { icon: 'github', link: 'https://github.com/supratikchatterjee16/academia' }
     ],
@@ -35,5 +37,20 @@ export default defineConfig({
       provider: 'local'
     }
   },
-  markdown: {math: true}
-})
+  markdown: {math: true},
+  srcDir: 'academia',
+  cleanUrls: true,
+  lastUpdated: true,
+};
+
+const vitePressSidebarOptions = {
+  // VitePress Sidebar's options here...
+  documentRootPath: '/academia',
+  collapsed: true,
+  capitalizeFirst: true,
+  useTitleFromFileHeading: true,
+  useFolderLinkFromIndexFile: true,
+  useFolderTitleFromIndexFile: true,
+};
+
+export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
