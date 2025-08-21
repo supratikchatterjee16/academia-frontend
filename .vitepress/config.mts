@@ -8,7 +8,7 @@ const vitePressOptions = {
   lang: 'en-US',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/conceivilize.svg',
+    logo: '/academia-frontend/assets/conceivilize.svg',
     // nav: [
     //   { text: 'Home', link: '/' },
     //   { text: 'Examples', link: '/markdown-examples' }
@@ -46,7 +46,7 @@ const vitePressOptions = {
 
 const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
-  documentRootPath: '/academia',
+  documentRootPath: 'academia',
   collapsed: true,
   capitalizeFirst: true,
   useTitleFromFileHeading: true,
