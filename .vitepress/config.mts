@@ -41,6 +41,7 @@ const vitePressOptions = {
   srcDir: 'academia',
   cleanUrls: true,
   lastUpdated: true,
+  base: '/academia/',
 };
 
 const vitePressSidebarOptions = {
