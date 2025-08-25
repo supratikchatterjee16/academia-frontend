@@ -28,7 +28,7 @@ const vitePressOptions = {
   cleanUrls: true,
   lastUpdated: true,
   base: '/academia-frontend/',
-  sitemap: {hostname: "https://supratikchatterjee16.github.io/academia-frontend"},
+  sitemap: {hostname: "https://supratikchatterjee16.github.io/academia-frontend/"},
 };
 
 const vitePressSidebarOptions = {
