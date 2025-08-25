@@ -1,11 +1,13 @@
 {
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "vitepress": "^1.6.3",
     "vitepress-sidebar": "^1.31.1"
   },
   "scripts": {
+    "copy-robots": "copyfiles -u 1 ./public/robots.txt ./.vitepress/dist",
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build && npm run copy-robots",
     "docs:preview": "vitepress preview"
   },
   "dependencies": {

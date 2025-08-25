@@ -9,20 +9,6 @@ const vitePressOptions = {
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/academia-frontend/assets/conceivilize.svg',
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
-
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com/supratikchatterjee16/academia' }
@@ -42,6 +28,7 @@ const vitePressOptions = {
   cleanUrls: true,
   lastUpdated: true,
   base: '/academia-frontend/',
+  sitemap: {hostname: "https://supratikchatterjee16.github.io/academia-frontend"},
 };
 
 const vitePressSidebarOptions = {
