@@ -6,8 +6,9 @@
   },
   "scripts": {
     "copy-robots": "copyfiles -u 1 ./public/robots.txt ./.vitepress/dist",
+    "copy-icons": "copyfiles -u 1 ./public/*.png ./.vitepress/dist",
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build && npm run copy-robots",
+    "docs:build": "vitepress build && npm run copy-robots && npm run copy-icons",
     "docs:preview": "vitepress preview"
   },
   "dependencies": {

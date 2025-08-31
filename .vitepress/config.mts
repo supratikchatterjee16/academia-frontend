@@ -8,7 +8,7 @@ const vitePressOptions = {
   lang: 'en-US',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/academia-frontend/assets/conceivilize.svg',
+    logo: '/conceivilize.png',
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com/supratikchatterjee16/academia' }
