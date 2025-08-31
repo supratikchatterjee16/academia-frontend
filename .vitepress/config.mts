@@ -6,6 +6,7 @@ const vitePressOptions = {
   title: "academia",
   description: "Notes collected over years of studies.",
   lang: 'en-US',
+  head: [['link', { rel: 'icon', href: '/academia-frontend/conceivilize.png' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/conceivilize.png',
