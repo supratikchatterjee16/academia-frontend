@@ -1,45 +1,80 @@
 import { defineConfig } from 'vitepress'
-import {withSidebar} from 'vitepress-sidebar'
+import { generateSidebar } from 'vitepress-sidebar' // Using standard generateSidebar for multi-routing
 
-// https://vitepress.dev/reference/site-config
-const vitePressOptions = {
+// https://vitepress.dev
+export default defineConfig({
   title: "academia",
   description: "Notes collected over years of studies.",
   lang: 'en-US',
   head: [['link', { rel: 'icon', href: '/academia-frontend/conceivilize.png' }]],
+  
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: '/conceivilize.png',
-    
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/supratikchatterjee16/academia' }
+      { icon: 'github', link: 'https://github.com' }
     ],
-
     footer: {
       message: 'Powered by VitePress',
       copyright: 'Copyright © 2025 Conceivilize'
     },
-
     search: {
       provider: 'local'
-    }
+    },
+
+    // ─── MULTI-SIDEBAR CONFIGURATION ───
+    // Generates a separate directory scanner context for each root folder
+    sidebar: generateSidebar([
+      {
+        documentRootPath: 'academia',
+        scanStartPath: 'business',
+        resolvePath: '/business/',
+        useTitleFromFileHeading: true,
+        useFolderTitleFromIndexFile: true,
+        useFolderLinkFromIndexFile: true,
+        collapsed: true,
+        capitalizeFirst: true,
+        excludeByFolderDepth: undefined // Ensures nothing is skipped downward
+      },
+      {
+        documentRootPath: 'academia',
+        scanStartPath: 'decision_science',
+        resolvePath: '/decision_science/',
+        useTitleFromFileHeading: true,
+        useFolderTitleFromIndexFile: true,
+        useFolderLinkFromIndexFile: true,
+        collapsed: true,
+        capitalizeFirst: true,
+        excludeByFolderDepth: undefined
+      },
+      {
+        documentRootPath: 'academia',
+        scanStartPath: 'sustainability',
+        resolvePath: '/sustainability/',
+        useTitleFromFileHeading: true,
+        useFolderTitleFromIndexFile: true,
+        useFolderLinkFromIndexFile: true,
+        collapsed: true,
+        capitalizeFirst: true,
+        excludeByFolderDepth: undefined
+      },
+      {
+        documentRootPath: 'academia',
+        scanStartPath: 'technology',
+        resolvePath: '/technology/',
+        useTitleFromFileHeading: true,
+        useFolderTitleFromIndexFile: true,
+        useFolderLinkFromIndexFile: true,
+        collapsed: true,
+        capitalizeFirst: true,
+        excludeByFolderDepth: undefined
+      }
+    ])
   },
-  markdown: {math: true},
+  
+  markdown: { math: true },
   srcDir: 'academia',
   cleanUrls: true,
   lastUpdated: true,
   base: '/academia-frontend/',
-  sitemap: {hostname: "https://supratikchatterjee16.github.io/academia-frontend/"},
-};
-
-const vitePressSidebarOptions = {
-  // VitePress Sidebar's options here...
-  documentRootPath: 'academia',
-  collapsed: true,
-  capitalizeFirst: true,
-  useTitleFromFileHeading: true,
-  useFolderLinkFromIndexFile: true,
-  useFolderTitleFromIndexFile: true,
-};
-
-export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
+  sitemap: { hostname: "https://github.io" },
+});
